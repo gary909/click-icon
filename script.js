@@ -1,29 +1,29 @@
-// Open and close window 1
-document.getElementById("info-icon").addEventListener("click", function () {
-  document.getElementById("info-window").style.display = "block";
-});
+// // Open and close window 1
+// document.getElementById("info-icon").addEventListener("click", function () {
+//   document.getElementById("info-window").style.display = "block";
+// });
 
-document.getElementById("close-btn1").addEventListener("click", function () {
-  document.getElementById("info-window").style.display = "none";
-});
+// document.getElementById("close-btn1").addEventListener("click", function () {
+//   document.getElementById("info-window").style.display = "none";
+// });
 
-// Open and close window 2
-document.getElementById("info-icon2").addEventListener("click", function () {
-  document.getElementById("info-window2").style.display = "block";
-});
+// // Open and close window 2
+// document.getElementById("info-icon2").addEventListener("click", function () {
+//   document.getElementById("info-window2").style.display = "block";
+// });
 
-document.getElementById("close-btn2").addEventListener("click", function () {
-  document.getElementById("info-window2").style.display = "none";
-});
+// document.getElementById("close-btn2").addEventListener("click", function () {
+//   document.getElementById("info-window2").style.display = "none";
+// });
 
-// Open and close window 3
-document.getElementById("info-icon3").addEventListener("click", function () {
-  document.getElementById("info-window3").style.display = "block";
-});
+// // Open and close window 3
+// document.getElementById("info-icon3").addEventListener("click", function () {
+//   document.getElementById("info-window3").style.display = "block";
+// });
 
-document.getElementById("close-btn3").addEventListener("click", function () {
-  document.getElementById("info-window3").style.display = "none";
-});
+// document.getElementById("close-btn3").addEventListener("click", function () {
+//   document.getElementById("info-window3").style.display = "none";
+// });
 
 // Make windows draggable
 function makeDraggable(element, header) {
@@ -96,3 +96,45 @@ makeDraggable(
   document.getElementById("info-window3"),
   document.getElementById("header3")
 );
+
+//************************shrink open/close anim******************************* */
+function toggleWindow(element) {
+  // Set the display to block first, and then use setTimeout to apply the show class
+  element.style.display = "block";
+
+  // Trigger a reflow to make sure the transition works
+  element.offsetHeight; // This forces a reflow, necessary for the transition to work
+
+  // Add the show class to trigger the grow-out animation
+  element.classList.add("show");
+}
+
+function closeWindow(element) {
+  // Remove the show class to trigger the shrink-down animation
+  element.classList.remove("show");
+
+  // Hide the element after the animation completes
+  setTimeout(() => {
+    element.style.display = "none";
+  }, 200); // Match the transition duration (200ms)
+}
+
+document.getElementById("info-icon").addEventListener("click", function () {
+  toggleWindow(document.getElementById("info-window"));
+});
+
+document.getElementById("info-icon2").addEventListener("click", function () {
+  toggleWindow(document.getElementById("info-window2"));
+});
+
+document.getElementById("info-icon3").addEventListener("click", function () {
+  toggleWindow(document.getElementById("info-window3"));
+});
+
+document.querySelectorAll(".close-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    closeWindow(this.parentElement);
+  });
+});
+
+//*************************************************************************** */

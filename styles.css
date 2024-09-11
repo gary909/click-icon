@@ -16,18 +16,27 @@ body {
   cursor: pointer;
 }
 
+/* Initial hidden state with scale set to 0 (fully shrunk) */
 .info-window {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   width: 300px;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color: white;
   border: 2px solid #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+}
+
+/* When the window is visible (displayed), it scales to 1 (full size) and fades in */
+.info-window.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .window-header {

@@ -32,10 +32,8 @@ function makeDraggable(element, header) {
     offsetY = 0;
 
   // Bring the window to the top when clicking anywhere on the window
-
   element.addEventListener("mousedown", function (event) {
     // Ensure the close button doesn't trigger the z-index change
-
     if (!event.target.classList.contains("close-btn")) {
       element.style.zIndex = getNextZIndex();
     }

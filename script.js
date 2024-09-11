@@ -31,6 +31,16 @@ function makeDraggable(element, header) {
   let offsetX = 0,
     offsetY = 0;
 
+  // Bring the window to the top when clicking anywhere on the window
+
+  element.addEventListener("mousedown", function (event) {
+    // Ensure the close button doesn't trigger the z-index change
+
+    if (!event.target.classList.contains("close-btn")) {
+      element.style.zIndex = getNextZIndex();
+    }
+  });
+
   header.onmousedown = function (event) {
     isDragging = true;
 
@@ -40,6 +50,9 @@ function makeDraggable(element, header) {
 
     // Ensure the cursor doesn't select text while dragging
     event.preventDefault();
+
+    // Bring the window to the top by setting the highest z-index
+    element.style.zIndex = getNextZIndex();
 
     document.onmousemove = function (event) {
       if (isDragging) {
@@ -55,6 +68,21 @@ function makeDraggable(element, header) {
       document.onmouseup = null;
     };
   };
+}
+
+// Function to get the next highest z-index
+function getNextZIndex() {
+  const allWindows = document.querySelectorAll(".info-window");
+  let highestZIndex = 0;
+
+  allWindows.forEach((window) => {
+    const zIndex = parseInt(window.style.zIndex) || 0;
+    if (zIndex > highestZIndex) {
+      highestZIndex = zIndex;
+    }
+  });
+
+  return highestZIndex + 1;
 }
 
 // Apply draggable functionality

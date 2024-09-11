@@ -1,6 +1,6 @@
 body {
-  /* font-family: Arial, sans-serif; */
-  font-family: "Chicago", sans-serif; /* This is the Mac OS System Font, substitute with any similar font */
+  font-family: Arial, sans-serif;
+  /* font-family: "Chicago", sans-serif; This is the Mac OS System Font, substitute with any similar font */
   /* background-color: #a3a3a3; Background similar to the old Mac OS */
   background-color: #bee2ff;
   margin: 0;
@@ -12,7 +12,7 @@ body {
 .nav-bar {
   display: flex;
   background-color: #a1d5ff;
-  padding: 5px;
+  padding: 1px;
   border-bottom: 1px solid #000;
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@ body {
 
 .nav-item {
   position: relative;
-  padding: 5px 10px;
+  padding: 1px 5px;
   cursor: pointer;
 }
 
@@ -58,7 +58,7 @@ body {
   color: #fff;
 }
 
-/***************************End of Nav Bar******************************/
+/***************************ICONS BELOW*******************************/
 
 .icon-container {
   position: relative;
@@ -70,6 +70,8 @@ body {
   height: 50px;
   cursor: pointer;
 }
+
+/********************DRAGGABLE WINDOWS BELOW***************************/
 
 /* Initial hidden state with scale set to 0 (fully shrunk) */
 .info-window {

@@ -1,9 +1,64 @@
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
+  font-family: "Chicago", sans-serif; /* This is the Mac OS System Font, substitute with any similar font */
+  /* background-color: #a3a3a3; Background similar to the old Mac OS */
   background-color: #bee2ff;
   margin: 0;
   padding: 0;
 }
+
+/***************************Start of NAV BAR*******************************/
+
+.nav-bar {
+  display: flex;
+  background-color: #a1d5ff;
+  padding: 5px;
+  border-bottom: 1px solid #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-item {
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: #000080; /* Dark blue hover similar to Mac OS */
+  color: #fff;
+}
+
+.nav-item .dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #c0c0c0;
+  border: 1px solid #000;
+  z-index: 999;
+  padding: 5px;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.dropdown a:hover {
+  background-color: #000080; /* Dark blue hover similar to Mac OS */
+  color: #fff;
+}
+
+/***************************End of Nav Bar******************************/
 
 .icon-container {
   position: relative;

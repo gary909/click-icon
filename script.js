@@ -28,15 +28,22 @@ document.getElementById("close-btn3").addEventListener("click", function () {
 // Make windows draggable
 function makeDraggable(element, header) {
   let isDragging = false;
-  let offsetX, offsetY;
+  let offsetX = 0,
+    offsetY = 0;
 
   header.onmousedown = function (event) {
     isDragging = true;
-    offsetX = event.clientX - element.getBoundingClientRect().left;
-    offsetY = event.clientY - element.getBoundingClientRect().top;
+
+    // Calculate the offset between the mouse pointer and the window's top-left corner
+    offsetX = event.clientX - element.offsetLeft;
+    offsetY = event.clientY - element.offsetTop;
+
+    // Ensure the cursor doesn't select text while dragging
+    event.preventDefault();
 
     document.onmousemove = function (event) {
       if (isDragging) {
+        // Move the window, maintaining the offset
         element.style.left = event.clientX - offsetX + "px";
         element.style.top = event.clientY - offsetY + "px";
       }
@@ -44,6 +51,8 @@ function makeDraggable(element, header) {
 
     document.onmouseup = function () {
       isDragging = false;
+      document.onmousemove = null;
+      document.onmouseup = null;
     };
   };
 }

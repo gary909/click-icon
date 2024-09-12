@@ -1,8 +1,19 @@
+/***************************USE FANCY FONT*******************************/
+/* Define the Topaz-8 font using @font-face */
+@font-face {
+  font-family: "Topaz-8";
+  src: url("fonts/Topaz-8.ttf") format("truetype"); /* path to font */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/***************************BODY*******************************/
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Topaz-8", sans-serif;
   /* font-family: "Chicago", sans-serif; This is the Mac OS System Font, substitute with any similar font */
   /* background-color: #a3a3a3; Background similar to the old Mac OS */
-  background-color: #bee2ff;
+  background-color: #004f9f;
   margin: 0;
   padding: 0;
 }
@@ -11,7 +22,7 @@ body {
 
 .nav-bar {
   display: flex;
-  background-color: #a1d5ff;
+  background-color: #efefef;
   padding: 1px;
   border-bottom: 1px solid #000;
   position: fixed;
@@ -27,17 +38,19 @@ body {
   cursor: default; /* Show the default cursor, no interaction */
   position: relative;
   padding: 1px 5px;
+  color: #004f9f; /* Font colour */
 }
 
 .nav-item {
   position: relative;
   padding: 1px 5px;
   cursor: pointer;
+  color: #004f9f; /* Font colour nav bar */
 }
 
 .nav-item:hover {
-  background-color: #000080; /* Dark blue hover similar to Mac OS */
-  color: #fff;
+  background-color: #02021d; /* Dark blue hover similar to Mac OS */
+  color: #ff8800;
 }
 
 /* Modify dropdown styling to be hidden by default */
@@ -46,8 +59,9 @@ body {
   position: absolute;
   left: 0;
   top: 100%;
-  background-color: #c0c0c0;
-  border: 1px solid #000;
+  background-color: #efefef;
+  /* border: 1px solid #000; */
+  color: #004f9f;
   z-index: 999;
   padding: 5px;
 }
@@ -61,12 +75,12 @@ body {
   display: block;
   padding: 5px 10px;
   text-decoration: none;
-  color: #000;
+  color: #004f9f; /* drop down font colour */
 }
 
 .dropdown a:hover {
-  background-color: #000080; /* Dark blue hover similar to Mac OS */
-  color: #fff;
+  background-color: #000; /* Dark blue hover similar to Mac OS */
+  color: #ff8800;
 }
 
 /***************************ICONS BELOW*******************************/

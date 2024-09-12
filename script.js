@@ -97,7 +97,7 @@ makeDraggable(
   document.getElementById("header3")
 );
 
-//************************shrink open/close anim******************************* */
+//************************shrink open/close window anim******************************* */
 function toggleWindow(element) {
   // Set the display to block first, and then use setTimeout to apply the show class
   element.style.display = "block";
@@ -135,6 +135,42 @@ document.querySelectorAll(".close-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     closeWindow(this.parentElement);
   });
+});
+
+//*************************Make nav bar open upon click****************************** */
+
+// Select all the nav items
+const navItems = document.querySelectorAll(".nav-item");
+
+// Add click event listener to each nav item
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    // Toggle the display of the dropdown
+    const dropdown = this.querySelector(".dropdown");
+
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none"; // Close the dropdown
+    } else {
+      // First close any other open dropdowns
+      document.querySelectorAll(".dropdown").forEach((menu) => {
+        menu.style.display = "none";
+      });
+
+      // Then open the clicked one
+      dropdown.style.display = "block";
+    }
+  });
+});
+
+// Close the dropdown if you click outside the nav bar
+document.addEventListener("click", function (event) {
+  const isClickInsideNav = event.target.closest(".nav-bar");
+
+  if (!isClickInsideNav) {
+    document.querySelectorAll(".dropdown").forEach((menu) => {
+      menu.style.display = "none";
+    });
+  }
 });
 
 //*************************************************************************** */

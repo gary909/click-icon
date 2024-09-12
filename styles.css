@@ -31,8 +31,9 @@ body {
   color: #fff;
 }
 
+/* Modify dropdown styling to be hidden by default */
 .nav-item .dropdown {
-  display: none;
+  display: none; /* Hidden by default */
   position: absolute;
   left: 0;
   top: 100%;
@@ -42,9 +43,10 @@ body {
   padding: 5px;
 }
 
-.nav-item:hover .dropdown {
+/* removed auto drop down of nav */
+/* .nav-item:hover .dropdown {
   display: block;
-}
+} */
 
 .dropdown a {
   display: block;

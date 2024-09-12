@@ -1,5 +1,9 @@
 "# click-icon"
 
+Update:  Added retro font and styling
+
+![retroFont](https://github.com/user-attachments/assets/33ba4e6f-8bf3-4dd0-beb1-192b7e05f73f)
+
 Update: Added time and date to top nav
 
 ![timeDate](https://github.com/user-attachments/assets/8921f27d-2989-41fb-8379-689874b202df)

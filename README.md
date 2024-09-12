@@ -1,5 +1,9 @@
 "# click-icon"
 
+Added new  icons
+
+![image](https://github.com/user-attachments/assets/c3b01a90-dac5-48a7-9ce7-4584a028a4fa)
+
 Update: Added CRT Scan lines
 
 ![image](https://github.com/user-attachments/assets/b265cd85-2e5c-4a8b-9b81-b67e9c85285f)

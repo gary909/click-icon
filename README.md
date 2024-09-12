@@ -1,5 +1,9 @@
 "# click-icon"
 
+Update: Added CRT Scan lines
+
+![image](https://github.com/user-attachments/assets/b265cd85-2e5c-4a8b-9b81-b67e9c85285f)
+
 Update:  Added retro font and styling
 
 ![retroFont](https://github.com/user-attachments/assets/33ba4e6f-8bf3-4dd0-beb1-192b7e05f73f)

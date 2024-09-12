@@ -1,5 +1,9 @@
 "# click-icon"
 
+Update: Added time and date to top nav
+
+![timeDate](https://github.com/user-attachments/assets/8921f27d-2989-41fb-8379-689874b202df)
+
 Update: Icons show border on mouse hover
 
 ![borderHover1](https://github.com/user-attachments/assets/d3a71d92-5ec8-46f2-9f32-e89a834f2bfb)

@@ -7,6 +7,27 @@
   font-style: normal;
 }
 
+/***************************CRT Scan Lines*******************************/
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Make sure the scan lines are on top of everything */
+  pointer-events: none; /* Ensure the scan lines don’t block interaction */
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 3px,
+    transparent 5px
+  );
+  opacity: 0.7; /* Adjust the visibility of the scan lines */
+}
+
 /***************************BODY*******************************/
 
 body {

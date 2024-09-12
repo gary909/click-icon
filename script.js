@@ -25,6 +25,8 @@
 //   document.getElementById("info-window3").style.display = "none";
 // });
 
+//************************Make Open Windows Draggable******************************* */
+
 // Make windows draggable
 function makeDraggable(element, header) {
   let isDragging = false;
@@ -196,4 +198,43 @@ document.addEventListener("click", function (event) {
   }
 });
 
-//*************************************************************************** */
+//*******************************Make Icons Draggable******************************** */
+
+// Function to make icon containers draggable
+function makeIconDraggable(iconContainer) {
+  let isDragging = false;
+  let offsetX = 0,
+    offsetY = 0;
+
+  iconContainer.addEventListener("mousedown", function (event) {
+    isDragging = true;
+
+    // Calculate the offset between the mouse pointer and the icon container's top-left corner
+    offsetX = event.clientX - iconContainer.offsetLeft;
+    offsetY = event.clientY - iconContainer.offsetTop;
+
+    // Prevent default behavior (e.g., text selection while dragging)
+    event.preventDefault();
+
+    document.onmousemove = function (event) {
+      if (isDragging) {
+        // Move the icon container, maintaining the offset
+        iconContainer.style.left = event.clientX - offsetX + "px";
+        iconContainer.style.top = event.clientY - offsetY + "px";
+        iconContainer.style.position = "absolute"; // Ensure it stays within document flow
+      }
+    };
+
+    document.onmouseup = function () {
+      isDragging = false;
+      document.onmousemove = null;
+      document.onmouseup = null;
+    };
+  });
+}
+
+// Select all icon containers and make them draggable
+const iconContainers = document.querySelectorAll(".icon-container");
+iconContainers.forEach((container) => makeIconDraggable(container));
+
+//**************************************************************************** */

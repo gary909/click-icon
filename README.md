@@ -1,4 +1,9 @@
 "# click-icon"
+
+Update: Icons now draggable
+
+![dragIcons](https://github.com/user-attachments/assets/ad25d24c-54df-4ad9-ac5d-e0b9ab63414f)
+
 Update: Nav Bar now opens on click
 
 Update: Added Basic Nav Bar

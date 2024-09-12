@@ -63,15 +63,30 @@ body {
 /***************************ICONS BELOW*******************************/
 
 .icon-container {
+  display: inline-block; /* Ensure the container wraps around the icon */
   position: relative;
   margin: 20px;
   cursor: grab; /* Show the user that it's draggable */
+  border: 2px solid transparent; /* No visible border by default */
+  padding: 5px; /* Add some padding for space between icon and border */
+  transition: border-color 0.3s ease; /* Smooth transition for the border */
+}
+
+.icon-container img {
+  display: block; /* Ensure the image inside behaves as a block element */
+  /* width: 100px; Set the icon's width */ /*GARY CHANGE ICON SIZE HERE LATER!!! */
+  height: auto; /* Auto height for the icon */
 }
 
 .icon {
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+.icon-container:hover {
+  border-color: #4a4afa21; /* Set the border color to appear when hovered (green as an example) */
+  border-radius: 5px;
 }
 
 .icon-container:active {

@@ -121,15 +121,15 @@ function closeWindow(element) {
   }, 200); // Match the transition duration (200ms)
 }
 
-document.getElementById("info-icon").addEventListener("click", function () {
+document.getElementById("info-icon").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window"));
 });
 
-document.getElementById("info-icon2").addEventListener("click", function () {
+document.getElementById("info-icon2").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window2"));
 });
 
-document.getElementById("info-icon3").addEventListener("click", function () {
+document.getElementById("info-icon3").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window3"));
 });
 

@@ -1,4 +1,13 @@
 "# click-icon"
+
+Update: Icons show border on mouse hover
+
+![borderHover1](https://github.com/user-attachments/assets/d3a71d92-5ec8-46f2-9f32-e89a834f2bfb)
+
+Update: Icons now draggable
+
+![dragIcons](https://github.com/user-attachments/assets/ad25d24c-54df-4ad9-ac5d-e0b9ab63414f)
+
 Update: Nav Bar now opens on click
 
 Update: Added Basic Nav Bar

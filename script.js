@@ -139,37 +139,60 @@ document.querySelectorAll(".close-btn").forEach((btn) => {
 
 //*************************Make nav bar open upon click****************************** */
 
+// Set a flag to indicate if the navbar is active
+let navbarActive = false;
+
 // Select all the nav items
 const navItems = document.querySelectorAll(".nav-item");
 
-// Add click event listener to each nav item
+// Add click event listener to each nav item (initial click activates hover)
 navItems.forEach((item) => {
-  item.addEventListener("click", function () {
-    // Toggle the display of the dropdown
-    const dropdown = this.querySelector(".dropdown");
+  item.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevents closing dropdown immediately when clicking inside
 
-    if (dropdown.style.display === "block") {
-      dropdown.style.display = "none"; // Close the dropdown
-    } else {
-      // First close any other open dropdowns
-      document.querySelectorAll(".dropdown").forEach((menu) => {
-        menu.style.display = "none";
-      });
+    // Activate the navbar if it is not active yet
+    if (!navbarActive) {
+      navbarActive = true;
+      const dropdown = this.querySelector(".dropdown");
 
-      // Then open the clicked one
+      // Close any other open dropdowns and open the clicked one
+      closeAllDropdowns();
       dropdown.style.display = "block";
+
+      // Enable hover functionality for all other items
+      enableHover();
     }
   });
 });
 
-// Close the dropdown if you click outside the nav bar
+// Enable hover functionality after the first click
+function enableHover() {
+  navItems.forEach((item) => {
+    item.addEventListener("mouseenter", function () {
+      if (navbarActive) {
+        const dropdown = this.querySelector(".dropdown");
+        // Close any other open dropdowns and show the hovered one
+        closeAllDropdowns();
+        dropdown.style.display = "block";
+      }
+    });
+  });
+}
+
+// Function to close all open dropdowns
+function closeAllDropdowns() {
+  document.querySelectorAll(".dropdown").forEach((menu) => {
+    menu.style.display = "none";
+  });
+}
+
+// Close the dropdowns and reset navbar when clicking outside
 document.addEventListener("click", function (event) {
   const isClickInsideNav = event.target.closest(".nav-bar");
 
   if (!isClickInsideNav) {
-    document.querySelectorAll(".dropdown").forEach((menu) => {
-      menu.style.display = "none";
-    });
+    closeAllDropdowns();
+    navbarActive = false; // Reset navbar state when clicking outside
   }
 });
 

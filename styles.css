@@ -20,6 +20,15 @@ body {
   z-index: 1000;
 }
 
+.time-date {
+  margin-right: 50px; /* Add space on the right */
+  /* font-weight: bold; */
+  user-select: none; /* Prevent text selection */
+  cursor: default; /* Show the default cursor, no interaction */
+  position: relative;
+  padding: 1px 5px;
+}
+
 .nav-item {
   position: relative;
   padding: 1px 5px;

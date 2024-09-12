@@ -1,4 +1,5 @@
 "# click-icon"
+Update: Nav Bar now opens on click
 
 Update: Added Basic Nav Bar
 

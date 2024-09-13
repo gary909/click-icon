@@ -1,4 +1,9 @@
 "# click-icon"
+
+Updated window styling
+
+![image](https://github.com/user-attachments/assets/16805f56-f5d1-45ef-84c7-23cf10e956b0)
+
 Added icon text
 
 ![iconText](https://github.com/user-attachments/assets/d20c37eb-2500-4066-9288-9fd5023d5f86)

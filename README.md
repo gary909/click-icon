@@ -1,4 +1,6 @@
 "# click-icon"
+Improved navbar styling
+![image](https://github.com/user-attachments/assets/a051f620-6664-45ee-b531-8a5bb28ef1e0)
 
 Added scroll bar to window
 

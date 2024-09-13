@@ -44,6 +44,8 @@ body {
 
 .nav-bar {
   display: flex;
+  justify-content: space-between; /* Space between left (tabs) and right (time/date) */
+  align-items: center;
   background-color: #efefef;
   padding: 1px;
   border-bottom: 1px solid #000;
@@ -51,6 +53,26 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
+}
+
+/* Keep clickable navbar items left */
+.navbar-left {
+  display: flex;
+  gap: 20px; /* Space between the tabs */
+}
+
+/* Add a 20px gap to the first item in navbar */
+.navbar-left .nav-item:first-child {
+  margin-left: 20px; /* Add 20px gap to the first item on the left */
+}
+
+/* Keep time/date navbar right */
+.navbar-right {
+  /*margin-left: auto; /* Pushes the time/date to the right */
+  margin-right: 20px !important;
+  font-family: "Tahoma", sans-serif;
+  font-size: 14px;
+  color: white; /* Adjust text color to match your navbar */
 }
 
 .time-date {
@@ -116,7 +138,7 @@ body {
   justify-content: center; /* Center them vertically */
   position: relative;
   margin: 20px;
-  cursor: grab; /* Show the user that it's draggable */
+  cursor: pointer; /* Show the user that it's draggable */
   border: 2px solid transparent; /* No visible border by default */
   padding: 5px; /* Add some padding for space between icon and border */
   transition: border-color 0.3s ease; /* Smooth transition for the border */

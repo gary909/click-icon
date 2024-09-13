@@ -1,5 +1,9 @@
 "# click-icon"
 
+Added scroll bar to window
+
+![image](https://github.com/user-attachments/assets/ca6f809e-33a4-4af0-bc4d-72e54434c179)
+
 Updated window styling
 
 ![image](https://github.com/user-attachments/assets/16805f56-f5d1-45ef-84c7-23cf10e956b0)

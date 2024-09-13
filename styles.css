@@ -198,6 +198,11 @@ body {
   position: absolute;
   right: 3px; /* position */
   top: 3px; /* position */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.close-btn:hover {
+  background: #c00; /* Darker red color on hover */
 }
 
 .window-body {

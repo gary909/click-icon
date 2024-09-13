@@ -27,47 +27,59 @@
 
 //************************Make Open Windows Draggable******************************* */
 
-// Make windows draggable
+// Make windows draggable with a drag threshold
 function makeDraggable(element, header) {
   let isDragging = false;
   let offsetX = 0,
     offsetY = 0;
+  let startX = 0,
+    startY = 0;
+  const dragThreshold = 5;
 
   // Bring the window to the top when clicking anywhere on the window
   element.addEventListener("mousedown", function (event) {
-    // Ensure the close button doesn't trigger the z-index change
     if (!event.target.classList.contains("close-btn")) {
       element.style.zIndex = getNextZIndex();
     }
   });
 
-  header.onmousedown = function (event) {
-    isDragging = true;
-
-    // Calculate the offset between the mouse pointer and the window's top-left corner
+  header.addEventListener("mousedown", function (event) {
+    startX = event.clientX;
+    startY = event.clientY;
     offsetX = event.clientX - element.offsetLeft;
     offsetY = event.clientY - element.offsetTop;
+    isDragging = false;
 
-    // Ensure the cursor doesn't select text while dragging
-    event.preventDefault();
+    function onMouseMove(event) {
+      const diffX = Math.abs(event.clientX - startX);
+      const diffY = Math.abs(event.clientY - startY);
 
-    // Bring the window to the top by setting the highest z-index
-    element.style.zIndex = getNextZIndex();
+      // Only start dragging if the mouse has moved beyond the threshold
+      if (!isDragging && (diffX > dragThreshold || diffY > dragThreshold)) {
+        isDragging = true;
+      }
 
-    document.onmousemove = function (event) {
       if (isDragging) {
         // Move the window, maintaining the offset
         element.style.left = event.clientX - offsetX + "px";
         element.style.top = event.clientY - offsetY + "px";
+        element.style.position = "absolute"; // Ensure absolute positioning
       }
-    };
+    }
 
-    document.onmouseup = function () {
+    function onMouseUp() {
       isDragging = false;
-      document.onmousemove = null;
-      document.onmouseup = null;
-    };
-  };
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    }
+
+    // Add mousemove and mouseup listeners
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+
+    // Prevent default behavior (e.g., text selection)
+    event.preventDefault();
+  });
 }
 
 // Function to get the next highest z-index
@@ -207,33 +219,42 @@ function makeIconDraggable(iconContainer) {
     offsetY = 0;
 
   iconContainer.addEventListener("mousedown", function (event) {
-    isDragging = true;
+    let startX = event.clientX;
+    let startY = event.clientY;
+    isDragging = false;
 
-    // Calculate the offset between the mouse pointer and the icon container's top-left corner
     offsetX = event.clientX - iconContainer.offsetLeft;
     offsetY = event.clientY - iconContainer.offsetTop;
 
-    // Prevent default behavior (e.g., text selection while dragging)
-    event.preventDefault();
+    function onMouseMove(event) {
+      const diffX = Math.abs(event.clientX - startX);
+      const diffY = Math.abs(event.clientY - startY);
 
-    document.onmousemove = function (event) {
+      if (!isDragging && (diffX > 5 || diffY > 5)) {
+        isDragging = true;
+      }
+
       if (isDragging) {
-        // Move the icon container, maintaining the offset
         iconContainer.style.left = event.clientX - offsetX + "px";
         iconContainer.style.top = event.clientY - offsetY + "px";
-        iconContainer.style.position = "absolute"; // Ensure it stays within document flow
+        iconContainer.style.position = "absolute";
       }
-    };
+    }
 
-    document.onmouseup = function () {
+    function onMouseUp() {
       isDragging = false;
-      document.onmousemove = null;
-      document.onmouseup = null;
-    };
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    }
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+
+    event.preventDefault();
   });
 }
 
-// Select all icon containers and make them draggable
+// Apply draggable functionality to each icon
 const iconContainers = document.querySelectorAll(".icon-container");
 iconContainers.forEach((container) => makeIconDraggable(container));
 

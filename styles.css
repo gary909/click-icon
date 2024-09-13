@@ -31,7 +31,7 @@ body::before {
 /***************************BODY*******************************/
 
 body {
-  font-family: "Topaz-8", sans-serif;
+  font-family: sans-serif;
   /* font-family: "Chicago", sans-serif; This is the Mac OS System Font, substitute with any similar font */
   /* background-color: #a3a3a3; Background similar to the old Mac OS */
   letter-spacing: 0px; /* Kerning (text space) */
@@ -108,30 +108,35 @@ body {
 /***************************ICONS BELOW*******************************/
 
 .icon-container {
-  display: inline-block; /* Ensure the container wraps around the icon */
+  display: inline-flex; /* Change to flexbox to center elements */
+  flex-direction: column; /* Stack the image and text vertically */
+  align-items: center; /* Center them horizontally */
+  justify-content: center; /* Center them vertically */
   position: relative;
   margin: 20px;
   cursor: grab; /* Show the user that it's draggable */
   border: 2px solid transparent; /* No visible border by default */
   padding: 5px; /* Add some padding for space between icon and border */
   transition: border-color 0.3s ease; /* Smooth transition for the border */
+  text-align: center; /* Center the text inside */
 }
 
 .icon-container img {
-  display: block; /* Ensure the image inside behaves as a block element */
-  width: 45px; /*GARY CHANGE ICON SIZE HERE LATER!!! */
-  height: auto; /* Auto height for the icon */
+  display: block; /* Ensure the image behaves as a block element */
+  width: 45px; /* Adjust icon size here */
+  height: auto; /* Auto height to maintain aspect ratio */
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
+.icon-text {
+  display: block;
+  margin-top: 5px; /* Add some spacing between the icon and the text */
+  font-size: 14px; /* Set text size */
+  color: #e4e9fd; /* Set text color */
 }
 
 .icon-container:hover {
-  border-color: #4a4afa21; /* Set the border color to appear when hovered (green as an example) */
-  border-radius: 5px;
+  border-color: #4a4afac7; /* Set the border color to appear when hovered */
+  border-radius: 2px;
 }
 
 .icon-container:active {

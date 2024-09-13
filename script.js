@@ -110,6 +110,18 @@ makeDraggable(
   document.getElementById("info-window3"),
   document.getElementById("header3")
 );
+makeDraggable(
+  document.getElementById("info-window4"),
+  document.getElementById("header4")
+);
+makeDraggable(
+  document.getElementById("info-window5"),
+  document.getElementById("header5")
+);
+makeDraggable(
+  document.getElementById("info-window6"),
+  document.getElementById("header6")
+);
 
 //************************shrink open/close window anim******************************* */
 function toggleWindow(element) {
@@ -143,6 +155,18 @@ document.getElementById("info-icon2").addEventListener("dblclick", function () {
 
 document.getElementById("info-icon3").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window3"));
+});
+
+document.getElementById("info-icon4").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window4"));
+});
+
+document.getElementById("info-icon5").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window5"));
+});
+
+document.getElementById("info-icon6").addEventListener("dblclick", function () {
+  toggleWindow(document.getElementById("info-window6"));
 });
 
 document.querySelectorAll(".close-btn").forEach((btn) => {

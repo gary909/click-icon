@@ -154,7 +154,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  width: 400px;
+  width: 600px;
   height: 400px; /* Set a fixed height to enable scrolling */
   padding: 3px;
   background-color: white;

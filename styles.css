@@ -57,6 +57,8 @@ body {
   margin-right: 50px; /* Add space on the right */
   /* font-weight: bold; */
   user-select: none; /* Prevent text selection */
+  font-size: 12px;
+  /* line-height: -35px; */
   cursor: default; /* Show the default cursor, no interaction */
   position: relative;
   padding: 1px 5px;
@@ -152,7 +154,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  width: 300px;
+  width: 400px;
+  height: 400px; /* Set a fixed height to enable scrolling */
   padding: 3px;
   background-color: white;
   border: 5px double #8b8b8b;
@@ -160,6 +163,7 @@ body {
   z-index: 1000;
   transition: transform 0.2s ease, opacity 0.2s ease;
   opacity: 0;
+  /* overflow: auto; */
 }
 
 /* When the window is visible (displayed), it scales to 1 (full size) and fades in */
@@ -214,4 +218,17 @@ body {
 /* Style for a more retro shadow like the old Windows */
 .info-window {
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5); /* Shadow for 3D effect */
+}
+
+.window-body {
+  padding: 10px;
+  text-align: left;
+  font-family: "Tahoma", sans-serif;
+  height: calc(100% - 48px); /* Adjust based on header height and padding */
+  overflow: auto; /* Adds scrollbars when content overflows */
+}
+
+/* Optional: Add some margin to the bottom of the body to make sure the scrollbar doesn't overlap the bottom border */
+.window-body p {
+  margin-bottom: 10px;
 }

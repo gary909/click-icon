@@ -260,7 +260,7 @@ body {
   margin-bottom: 10px;
 }
 
-/********************Fullscreen buton***************************/
+/********************Fullscreen button***************************/
 
 .fullscreen-btn {
   background: none; /* No background */
@@ -268,7 +268,7 @@ body {
   cursor: pointer; /* Pointer cursor for button */
   font-size: 16px; /* Icon or text size */
   /* padding: 5px; Padding for clickable area */
-  line-height: 5px;
+  /* line-height: 5px; */
   margin-right: 5px; /* Add some space between button and time/date */
   /* color: white; Text color */
   outline: none; /* Remove default focus outline */
@@ -282,4 +282,20 @@ body {
   width: 20px; /* Adjust the size of the icon */
   height: auto; /* Maintain the aspect ratio */
   cursor: pointer; /* Show pointer when hovering over the button */
+}
+
+/********************Close All Windows button***************************/
+
+.close-windows-btn {
+  background: none; /* No background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor for button */
+  margin-right: 10px; /* Space between close button and fullscreen button */
+  outline: none; /* Remove default focus outline */
+}
+
+.close-icon {
+  width: 20px; /* Adjust icon size */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer;
 }

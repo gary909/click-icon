@@ -337,7 +337,20 @@ document.addEventListener("fullscreenchange", () => {
   }
 });
 
-//********************************************************************************* */
+//******************************Close All windows Button************************************ */
+
+// Function to close all open windows
+function closeAllWindows() {
+  const openWindows = document.querySelectorAll(".info-window.show");
+  openWindows.forEach((window) => {
+    window.classList.remove("show"); // Hide the window by removing the 'show' class
+  });
+}
+
+// Add event listener to the close windows button
+document
+  .getElementById("close-windows-btn")
+  .addEventListener("click", closeAllWindows);
 
 //********************************************************************************* */
 

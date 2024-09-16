@@ -160,11 +160,13 @@ body {
   display: block;
   margin-top: 5px; /* Add some spacing between the icon and the text */
   font-size: 14px; /* Set text size */
+  max-width: 60px;
   color: #e4e9fd; /* Set text color */
 }
 
 .icon-container:hover {
   border-color: #4a4afac7; /* Set the border color to appear when hovered */
+  background: #4a4afac7;
   border-radius: 2px;
 }
 

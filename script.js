@@ -122,6 +122,10 @@ makeDraggable(
   document.getElementById("info-window6"),
   document.getElementById("header6")
 );
+makeDraggable(
+  document.getElementById("info-window7"),
+  document.getElementById("header7")
+);
 
 //************************shrink open/close window anim******************************* */
 function toggleWindow(element) {
@@ -162,11 +166,15 @@ document.getElementById("info-icon4").addEventListener("dblclick", function () {
 });
 
 document.getElementById("info-icon5").addEventListener("dblclick", function () {
-  toggleWindow(document.getElementById("info-window5"));
+  window.open("https://bloghoskins.blogspot.com/", "_blank"); // Opens BLOG in a new tab
 });
 
 document.getElementById("info-icon6").addEventListener("dblclick", function () {
-  toggleWindow(document.getElementById("info-window6"));
+  window.open("https://github.com/gary909", "_blank"); // Opens GITHUB in a new tab
+});
+
+document.getElementById("info-icon7").addEventListener("dblclick", function () {
+  window.open("https://www.linkedin.com/in/gary-white-3a779a51/", "_blank"); // Opens LLINKEDIN in a new tab
 });
 
 document.querySelectorAll(".close-btn").forEach((btn) => {

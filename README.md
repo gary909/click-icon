@@ -1,5 +1,9 @@
 "# click-icon"
 
+Added a 'close all windows button'
+
+![closeWin](https://github.com/user-attachments/assets/74b8bc89-ca91-4382-a4de-6ab64b03684e)
+
 Added fullscreen button
 
 ![image](https://github.com/user-attachments/assets/4e192edd-89a3-4712-912a-ba5f79679177)

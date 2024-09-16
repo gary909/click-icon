@@ -306,13 +306,34 @@ updateTime();
 
 //********************************Fullscreen Button********************************** */
 
-const fullscreenBtn = document.getElementById("fullscreen-btn");
+// Function to toggle fullscreen mode
+function toggleFullscreen() {
+  const elem = document.documentElement; // Target the whole page (document)
 
-fullscreenBtn.addEventListener("click", () => {
   if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen(); // Enter fullscreen
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen(); // Exit fullscreen
+    // If not in fullscreen, request fullscreen mode
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    }
+    document.getElementById("fullscreen-icon").src = "fullscreen_exit.png"; // Change to exit icon
+  } else {
+    // Exit fullscreen
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+    document.getElementById("fullscreen-icon").src = "fullscreen_button.png"; // Change back to fullscreen icon
+  }
+}
+
+// Add event listener to the button
+document
+  .getElementById("fullscreen-btn")
+  .addEventListener("click", toggleFullscreen);
+
+// Handle when the user exits fullscreen with Escape or other methods
+document.addEventListener("fullscreenchange", () => {
+  if (!document.fullscreenElement) {
+    document.getElementById("fullscreen-icon").src = "fullscreen_button.png"; // Change back to fullscreen icon
   }
 });
 

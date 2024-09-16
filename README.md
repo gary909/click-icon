@@ -1,5 +1,9 @@
 "# click-icon"
 
+Added fullscreen button
+
+![image](https://github.com/user-attachments/assets/4e192edd-89a3-4712-912a-ba5f79679177)
+
 Improved navbar styling
 
 ![image](https://github.com/user-attachments/assets/a051f620-6664-45ee-b531-8a5bb28ef1e0)

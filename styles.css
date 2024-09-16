@@ -69,6 +69,8 @@ body {
 /* Keep time/date navbar right */
 .navbar-right {
   /*margin-left: auto; /* Pushes the time/date to the right */
+  display: flex;
+  align-items: center; /* Vertically center both the fullscreen button and the time/date */
   margin-right: 20px !important;
   font-family: "Tahoma", sans-serif;
   font-size: 14px;
@@ -80,10 +82,13 @@ body {
   /* font-weight: bold; */
   user-select: none; /* Prevent text selection */
   font-size: 12px;
-  /* line-height: -35px; */
+  /* line-height: 15px !important; */
   cursor: default; /* Show the default cursor, no interaction */
-  position: relative;
-  padding: 1px 5px;
+  /* position: relative; */
+  padding: 5px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  height: 100%; /* Ensure it takes up the full navbar height */
   color: #004f9f; /* Font colour */
 }
 
@@ -253,4 +258,28 @@ body {
 /* Optional: Add some margin to the bottom of the body to make sure the scrollbar doesn't overlap the bottom border */
 .window-body p {
   margin-bottom: 10px;
+}
+
+/********************Fullscreen buton***************************/
+
+.fullscreen-btn {
+  background: none; /* No background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor for button */
+  font-size: 16px; /* Icon or text size */
+  /* padding: 5px; Padding for clickable area */
+  line-height: 5px;
+  margin-right: 5px; /* Add some space between button and time/date */
+  /* color: white; Text color */
+  outline: none; /* Remove default focus outline */
+}
+
+.fullscreen-btn:hover {
+  color: #e4e9fd; /* Change color on hover */
+}
+
+.fullscreen-icon {
+  width: 20px; /* Adjust the size of the icon */
+  height: auto; /* Maintain the aspect ratio */
+  cursor: pointer; /* Show pointer when hovering over the button */
 }

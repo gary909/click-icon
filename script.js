@@ -304,4 +304,20 @@ setInterval(updateTime, 1000);
 // Initialize the time immediately
 updateTime();
 
+//********************************Fullscreen Button********************************** */
+
+const fullscreenBtn = document.getElementById("fullscreen-btn");
+
+fullscreenBtn.addEventListener("click", () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen(); // Enter fullscreen
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen(); // Exit fullscreen
+  }
+});
+
+//********************************************************************************* */
+
+//********************************************************************************* */
+
 //********************************************************************************* */

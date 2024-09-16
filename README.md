@@ -1,5 +1,9 @@
 "# click-icon"
 
+Added new icons and shortcuts
+
+![newIcons](https://github.com/user-attachments/assets/d6217140-5a1e-40c8-bcc7-252a6c03117c)
+
 Added a 'close all windows button'
 
 ![closeWin](https://github.com/user-attachments/assets/74b8bc89-ca91-4382-a4de-6ab64b03684e)

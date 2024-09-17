@@ -380,8 +380,8 @@ const vrWindow = document.getElementById("info-window-vr");
 
 // Function to open the vr window
 vrLink.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent the default behavior of the link
   toggleWindow(document.getElementById("info-window-vr"));
+  closeAllDropdowns();
 });
 
 //****** WEB DEV NAV BAR *******/
@@ -390,8 +390,8 @@ const webdevWindow = document.getElementById("info-window-webdev");
 
 // Function to open the webdev window
 webdevLink.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent the default behavior of the link
   toggleWindow(document.getElementById("info-window-webdev"));
+  closeAllDropdowns();
 });
 
 //****** Hardware NAV BAR ***/
@@ -401,8 +401,8 @@ const hardwareWindow = document.getElementById("info-window-hardware");
 
 // Function to open the hardware window
 projectsLink.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent the default behavior of the link
   toggleWindow(document.getElementById("info-window-hardware"));
+  closeAllDropdowns();
 });
 
 //********************************************************************************* */

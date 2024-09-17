@@ -274,16 +274,38 @@ body {
   margin-right: 5px; /* Add some space between button and time/date */
   /* color: white; Text color */
   outline: none; /* Remove default focus outline */
-}
-
-.fullscreen-btn:hover {
-  color: #e4e9fd; /* Change color on hover */
+  position: relative; /* Ensure tooltip is positioned relative to the button */
 }
 
 .fullscreen-icon {
   width: 20px; /* Adjust the size of the icon */
   height: auto; /* Maintain the aspect ratio */
   cursor: pointer; /* Show pointer when hovering over the button */
+}
+
+/* Tooltip for fullscreen button */
+.fullscreen-btn .tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #ff8800;
+  text-align: center;
+  /* border-radius: 5px; */
+  padding: 5px;
+  position: absolute;
+  z-index: 9999;
+  bottom: -80%; /* Position tooltip above the button */
+  left: 50%;
+  transform: translateX(-50%); /* Start tooltip off-screen to the left */
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.5s; /* Add a delay of 0.5s to the visibility */
+}
+
+.fullscreen-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.5s; /* Delay the fade-in by 0.5s */
+  color: #ff8800; /* Change color on hover */
 }
 
 /********************Close All Windows button***************************/
@@ -294,10 +316,66 @@ body {
   cursor: pointer; /* Pointer cursor for button */
   margin-right: 10px; /* Space between close button and fullscreen button */
   outline: none; /* Remove default focus outline */
+  position: relative; /* Ensure tooltip is positioned relative to the button */
 }
 
 .close-icon {
   width: 20px; /* Adjust icon size */
   height: auto; /* Maintain aspect ratio */
   cursor: pointer;
+}
+
+/* Tooltip for fullscreen button */
+.close-windows-btn .tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #ff8800;
+  text-align: center;
+  /* border-radius: 5px; */
+  padding: 5px;
+  position: absolute;
+  z-index: 9999;
+  bottom: -80%; /* Position tooltip above the button */
+  left: 50%;
+  transform: translateX(-50%); /* Start tooltip off-screen to the left */
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.5s; /* Add a delay of 0.5s to the visibility */
+}
+
+.close-windows-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.5s; /* Delay the fade-in by 0.5s */
+  color: #ff8800; /* Change color on hover */
+}
+
+/********************Tool Tip Styling***************************/
+.icon-container {
+  position: relative; /* Make the container the relative parent for the tooltip */
+  /* display: inline-block; */
+}
+
+.tooltip {
+  visibility: hidden; /* Initially hide the tooltip */
+  background-color: #333;
+  color: #ff8800;
+  font-size: 12px;
+  text-align: center;
+  /* border-radius: 5px; */
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position the tooltip above the icon */
+  left: 150%;
+  transform: translateX(-50%);
+  white-space: nowrap; /* Prevent the tooltip from wrapping */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.5s; /* Add a delay of 0.5s to the visibility */
+}
+
+.icon-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.5s; /* Delay the fade-in by 0.5s */
 }

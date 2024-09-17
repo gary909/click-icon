@@ -1,5 +1,9 @@
 "# click-icon"
 
+Navbar closes upon click
+
+![dropDown](https://github.com/user-attachments/assets/269ade67-18ac-48ab-9a51-ffc4fcefd112)
+
 Tooltips added
 
 ![toolTip](https://github.com/user-attachments/assets/49414951-e4c1-49fb-a275-ef260e999daf)

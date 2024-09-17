@@ -374,9 +374,30 @@ document
 
 //****************************************NAV BAR Links********************************* */
 
+//****** VR NAV BAR *******/
+const vrLink = document.getElementById("vr-link");
+const vrWindow = document.getElementById("info-window-vr");
+
+// Function to open the vr window
+vrLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the default behavior of the link
+  toggleWindow(document.getElementById("info-window-vr"));
+});
+
+//****** WEB DEV NAV BAR *******/
+const webdevLink = document.getElementById("webdev-link");
+const webdevWindow = document.getElementById("info-window-webdev");
+
+// Function to open the webdev window
+webdevLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the default behavior of the link
+  toggleWindow(document.getElementById("info-window-webdev"));
+});
+
+//****** Hardware NAV BAR ***/
 // Get the "Projects" link and hardware window elements
 const projectsLink = document.getElementById("hardware-link");
-const hardwareWindow = document.getElementById("info-window-hardware"); // Assuming this is the hardware window
+const hardwareWindow = document.getElementById("info-window-hardware");
 
 // Function to open the hardware window
 projectsLink.addEventListener("click", function (event) {

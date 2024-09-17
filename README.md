@@ -1,5 +1,9 @@
 "# click-icon"
 
+Tooltips added
+
+![toolTip](https://github.com/user-attachments/assets/49414951-e4c1-49fb-a275-ef260e999daf)
+
 Added new icons and shortcuts
 
 ![newIcons](https://github.com/user-attachments/assets/d6217140-5a1e-40c8-bcc7-252a6c03117c)

@@ -197,6 +197,7 @@ body {
 
 /* When the window is visible (displayed), it scales to 1 (full size) and fades in */
 .info-window.show {
+  /* display: block; */
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }

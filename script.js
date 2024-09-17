@@ -3,26 +3,26 @@
 //   document.getElementById("info-window").style.display = "block";
 // });
 
-// document.getElementById("close-btn1").addEventListener("click", function () {
+// document.getElementById("info-close-btn").addEventListener("click", function () {
 //   document.getElementById("info-window").style.display = "none";
 // });
 
 // // Open and close window 2
-// document.getElementById("info-icon2").addEventListener("click", function () {
-//   document.getElementById("info-window2").style.display = "block";
+// document.getElementById("info-iconHrdwr").addEventListener("click", function () {
+//   document.getElementById("info-window-hardware").style.display = "block";
 // });
 
-// document.getElementById("close-btn2").addEventListener("click", function () {
-//   document.getElementById("info-window2").style.display = "none";
+// document.getElementById("hrdwr-close-btn").addEventListener("click", function () {
+//   document.getElementById("info-window-hardware").style.display = "none";
 // });
 
 // // Open and close window 3
-// document.getElementById("info-icon3").addEventListener("click", function () {
-//   document.getElementById("info-window3").style.display = "block";
+// document.getElementById("info-iconWebDev").addEventListener("click", function () {
+//   document.getElementById("info-window-webdev").style.display = "block";
 // });
 
-// document.getElementById("close-btn3").addEventListener("click", function () {
-//   document.getElementById("info-window3").style.display = "none";
+// document.getElementById("webdv-close-btn").addEventListener("click", function () {
+//   document.getElementById("info-window-webdev").style.display = "none";
 // });
 
 //************************Make Open Windows Draggable******************************* */
@@ -100,19 +100,19 @@ function getNextZIndex() {
 // Apply draggable functionality
 makeDraggable(
   document.getElementById("info-window"),
-  document.getElementById("header1")
+  document.getElementById("info-header")
 );
 makeDraggable(
-  document.getElementById("info-window2"),
-  document.getElementById("header2")
+  document.getElementById("info-window-hardware"),
+  document.getElementById("hrdwr-header")
 );
 makeDraggable(
-  document.getElementById("info-window3"),
-  document.getElementById("header3")
+  document.getElementById("info-window-webdev"),
+  document.getElementById("webdv-header")
 );
 makeDraggable(
-  document.getElementById("info-window4"),
-  document.getElementById("header4")
+  document.getElementById("info-window-vr"),
+  document.getElementById("vr-header")
 );
 makeDraggable(
   document.getElementById("info-window5"),
@@ -153,29 +153,41 @@ document.getElementById("info-icon").addEventListener("dblclick", function () {
   toggleWindow(document.getElementById("info-window"));
 });
 
-document.getElementById("info-icon2").addEventListener("dblclick", function () {
-  toggleWindow(document.getElementById("info-window2"));
-});
+document
+  .getElementById("info-iconHrdwr")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-hardware"));
+  });
 
-document.getElementById("info-icon3").addEventListener("dblclick", function () {
-  toggleWindow(document.getElementById("info-window3"));
-});
+document
+  .getElementById("info-iconWebDev")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-webdev"));
+  });
 
-document.getElementById("info-icon4").addEventListener("dblclick", function () {
-  toggleWindow(document.getElementById("info-window4"));
-});
+document
+  .getElementById("info-iconVR")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-vr"));
+  });
 
-document.getElementById("info-icon5").addEventListener("dblclick", function () {
-  window.open("https://bloghoskins.blogspot.com/", "_blank"); // Opens BLOG in a new tab
-});
+document
+  .getElementById("info-iconBlog")
+  .addEventListener("dblclick", function () {
+    window.open("https://bloghoskins.blogspot.com/", "_blank"); // Opens BLOG in a new tab
+  });
 
-document.getElementById("info-icon6").addEventListener("dblclick", function () {
-  window.open("https://github.com/gary909", "_blank"); // Opens GITHUB in a new tab
-});
+document
+  .getElementById("info-iconGit")
+  .addEventListener("dblclick", function () {
+    window.open("https://github.com/gary909", "_blank"); // Opens GITHUB in a new tab
+  });
 
-document.getElementById("info-icon7").addEventListener("dblclick", function () {
-  window.open("https://www.linkedin.com/in/gary-white-3a779a51/", "_blank"); // Opens LLINKEDIN in a new tab
-});
+document
+  .getElementById("info-iconLinkIn")
+  .addEventListener("dblclick", function () {
+    window.open("https://www.linkedin.com/in/gary-white-3a779a51/", "_blank"); // Opens LLINKEDIN in a new tab
+  });
 
 document.querySelectorAll(".close-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
@@ -360,6 +372,16 @@ document
   .getElementById("close-windows-btn")
   .addEventListener("click", closeAllWindows);
 
-//********************************************************************************* */
+//****************************************NAV BAR Links********************************* */
+
+// Get the "Projects" link and hardware window elements
+const projectsLink = document.getElementById("hardware-link");
+const hardwareWindow = document.getElementById("info-window-hardware"); // Assuming this is the hardware window
+
+// Function to open the hardware window
+projectsLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the default behavior of the link
+  toggleWindow(document.getElementById("info-window-hardware"));
+});
 
 //********************************************************************************* */

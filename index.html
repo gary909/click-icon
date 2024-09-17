@@ -37,7 +37,7 @@
         <div class="nav-item">
           <span>Hardware</span>
           <div class="dropdown">
-            <a href="#">Projects</a>
+            <a href="#" id="hardware-link">Projects</a>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@
             class="fullscreen-icon"
             id="fullscreen-icon"
           />
-          <span class="tooltip">Make fullscreen</span> <!-- Tooltip text -->
+          <span class="tooltip">Toggle fullscreen</span> <!-- Tooltip text -->
         </button>
 
         <!-- Close Windows Button -->
@@ -87,7 +87,7 @@
       <img
         src="hardwareIcon.png"
         alt="Info2 Icon"
-        id="info-icon2"
+        id="info-iconHrdwr"
         class="icon"
       />
       <span class="icon-text">Hardware</span>
@@ -96,7 +96,7 @@
 
     <!-- Web Dev Icon -->
     <div class="icon-container">
-      <img src="webDev.png" alt="Info3 Icon" id="info-icon3" class="icon" />
+      <img src="webDev.png" alt="Webdev Icon" id="info-iconWebDev" class="icon" />
       <span class="icon-text">Web Dev</span>
       <span class="tooltip">See my Web Dev projects</span> <!-- Tooltip text -->
     </div>
@@ -104,28 +104,28 @@
 
     <!-- VR Icon -->
     <div class="icon-container">
-      <img src="vrIcon.png" alt="Info4 Icon" id="info-icon4" class="icon" />
+      <img src="vrIcon.png" alt="VR Icon" id="info-iconVR" class="icon" />
       <span class="icon-text">VR Stuff</span>
       <span class="tooltip">See my VR work</span> <!-- Tooltip text -->
     </div>
 
     <!-- Blog Shortcut -->
     <div class="icon-container">
-      <img src="blogIcon.png" alt="Info5 Icon" id="info-icon5" class="icon" />
+      <img src="blogIcon.png" alt="Blog Icon" id="info-iconBlog" class="icon" />
       <span class="icon-text">Blog-Shortcut</span>
       <span class="tooltip">Opens Blog in a new page</span> <!-- Tooltip text -->
     </div>
 
     <!-- Github Shortcut -->
     <div class="icon-container">
-      <img src="gitIcon.png" alt="Info6 Icon" id="info-icon6" class="icon" />
+      <img src="gitIcon.png" alt="Git Icon" id="info-iconGit" class="icon" />
       <span class="icon-text">Github-Shortcut</span>
       <span class="tooltip">Opens Github in a new page</span> <!-- Tooltip text -->
     </div>
 
     <!-- LinkedIn Shortcut -->
     <div class="icon-container">
-      <img src="linkedInIcon.png" alt="Info7 Icon" id="info-icon7" class="icon" />
+      <img src="linkedInIcon.png" alt="LinkedIn Icon" id="info-iconLinkIn" class="icon" />
       <span class="icon-text">LinkedIn-Shortcut</span>
       <span class="tooltip">Opens LinkedIn in a new page</span> <!-- Tooltip text -->
     </div>
@@ -133,16 +133,16 @@
     <!-- Draggable Windows -->
 
     <div id="info-window" class="info-window">
-      <div class="window-header" id="header1">Information</div>
-      <span class="close-btn" id="close-btn1">&times;</span>
+      <div class="window-header" id="info-header">Information</div>
+      <span class="close-btn" id="info-close-btn">&times;</span>
       <div class="window-body">
         <p>About Info</p>
       </div>
     </div>
 
-    <div id="info-window2" class="info-window">
-      <div class="window-header" id="header2">Hardware Projects</div>
-      <span class="close-btn" id="close-btn2">&times;</span>
+    <div id="info-window-hardware" class="info-window">
+      <div class="window-header" id="hrdwr-header">Hardware Projects</div>
+      <span class="close-btn" id="hrdwr-close-btn">&times;</span>
       <div class="window-body">
         <p>SYNTHESIZER & PCB DESIGN</p>
         <p>
@@ -202,9 +202,9 @@
       </div>
     </div>
 
-    <div id="info-window3" class="info-window">
-      <div class="window-header" id="header3">Web Dev Projects</div>
-      <span class="close-btn" id="close-btn3">&times;</span>
+    <div id="info-window-webdev" class="info-window">
+      <div class="window-header" id="webdv-header">Web Dev Projects</div>
+      <span class="close-btn" id="webdv-close-btn">&times;</span>
       <div class="window-body">
         <p>Web Dev Projects</p>
         <p>Overview</p>
@@ -282,9 +282,9 @@
       </div>
     </div>
 
-    <div id="info-window4" class="info-window">
-      <div class="window-header" id="header4">BLANK</div>
-      <span class="close-btn" id="close-btn4">&times;</span>
+    <div id="info-window-vr" class="info-window">
+      <div class="window-header" id="vr-header">BLANK</div>
+      <span class="close-btn" id="vr-close-btn">&times;</span>
       <div class="window-body">
         <p>BLANK</p>
         <p>

@@ -115,8 +115,8 @@ makeDraggable(
   document.getElementById("vr-header")
 );
 makeDraggable(
-  document.getElementById("info-window5"),
-  document.getElementById("header5")
+  document.getElementById("info-window-aboutMe"),
+  document.getElementById("aboutMe-header")
 );
 makeDraggable(
   document.getElementById("info-window6"),
@@ -187,6 +187,12 @@ document
   .getElementById("info-iconLinkIn")
   .addEventListener("dblclick", function () {
     window.open("https://www.linkedin.com/in/gary-white-3a779a51/", "_blank"); // Opens LLINKEDIN in a new tab
+  });
+
+document
+  .getElementById("info-iconAboutMe")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-aboutMe"));
   });
 
 document.querySelectorAll(".close-btn").forEach((btn) => {

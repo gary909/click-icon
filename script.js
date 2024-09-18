@@ -1,30 +1,3 @@
-// // Open and close window 1
-// document.getElementById("info-icon").addEventListener("click", function () {
-//   document.getElementById("info-window").style.display = "block";
-// });
-
-// document.getElementById("info-close-btn").addEventListener("click", function () {
-//   document.getElementById("info-window").style.display = "none";
-// });
-
-// // Open and close window 2
-// document.getElementById("info-iconHrdwr").addEventListener("click", function () {
-//   document.getElementById("info-window-hardware").style.display = "block";
-// });
-
-// document.getElementById("hrdwr-close-btn").addEventListener("click", function () {
-//   document.getElementById("info-window-hardware").style.display = "none";
-// });
-
-// // Open and close window 3
-// document.getElementById("info-iconWebDev").addEventListener("click", function () {
-//   document.getElementById("info-window-webdev").style.display = "block";
-// });
-
-// document.getElementById("webdv-close-btn").addEventListener("click", function () {
-//   document.getElementById("info-window-webdev").style.display = "none";
-// });
-
 //************************Make Open Windows Draggable******************************* */
 
 // Make windows draggable with a drag threshold
@@ -119,12 +92,12 @@ makeDraggable(
   document.getElementById("aboutMe-header")
 );
 makeDraggable(
-  document.getElementById("info-window6"),
-  document.getElementById("header6")
+  document.getElementById("info-window-resume"),
+  document.getElementById("resume-header")
 );
 makeDraggable(
-  document.getElementById("info-window7"),
-  document.getElementById("header7")
+  document.getElementById("info-window-contact"),
+  document.getElementById("contact-header")
 );
 
 //************************shrink open/close window anim******************************* */
@@ -193,6 +166,18 @@ document
   .getElementById("info-iconAboutMe")
   .addEventListener("dblclick", function () {
     toggleWindow(document.getElementById("info-window-aboutMe"));
+  });
+
+document
+  .getElementById("info-iconResume")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-resume"));
+  });
+
+document
+  .getElementById("info-iconContact")
+  .addEventListener("dblclick", function () {
+    toggleWindow(document.getElementById("info-window-contact"));
   });
 
 document.querySelectorAll(".close-btn").forEach((btn) => {
@@ -379,6 +364,36 @@ document
   .addEventListener("click", closeAllWindows);
 
 //****************************************NAV BAR Links********************************* */
+
+//************* ABOUT ME NAV BAR ****************/
+const aboutLink = document.getElementById("about-link");
+const aboutWindow = document.getElementById("info-window-aboutMe");
+
+// Function to open the vr window
+aboutLink.addEventListener("click", function (event) {
+  toggleWindow(document.getElementById("info-window-aboutMe"));
+  closeAllDropdowns();
+});
+
+//****** RESUME NAV BAR *******/
+const resumeLink = document.getElementById("resume-link");
+const resumeWindow = document.getElementById("info-window-resume");
+
+// Function to open the vr window
+resumeLink.addEventListener("click", function (event) {
+  toggleWindow(document.getElementById("info-window-resume"));
+  closeAllDropdowns();
+});
+
+//****** CONTACT NAV BAR *******/
+const contactLink = document.getElementById("contact-link");
+const contactWindow = document.getElementById("info-window-contact");
+
+// Function to open the vr window
+contactLink.addEventListener("click", function (event) {
+  toggleWindow(document.getElementById("info-window-contact"));
+  closeAllDropdowns();
+});
 
 //****** VR NAV BAR *******/
 const vrLink = document.getElementById("vr-link");

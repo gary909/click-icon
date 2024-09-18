@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Info Window Example</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -14,12 +14,9 @@
         <div class="nav-item">
           <span>About</span>
           <div class="dropdown">
-            <a href="#">About</a>
-            <a href="#">Resume</a>
-            <a href="#">Certificates</a>
-            <a href="#">Blog</a>
-            <a href="#">Github</a>
-            <a href="#">LinkedIn</a>
+            <a href="#" id="about-link">About</a>
+            <a href="#" id="resume-link">Resume</a>
+            <a href="#" id="contact-link">Contact</a>
             <a href="#">Cookies</a>
           </div>
         </div>
@@ -53,7 +50,8 @@
             class="fullscreen-icon"
             id="fullscreen-icon"
           />
-          <span class="tooltip">Toggle fullscreen</span> <!-- Tooltip text -->
+          <span class="tooltip">Toggle fullscreen</span>
+          <!-- Tooltip text -->
         </button>
 
         <!-- Close Windows Button -->
@@ -64,7 +62,8 @@
             class="close-icon"
             id="close-icon"
           />
-          <span class="tooltip">Close all windows</span> <!-- Tooltip text -->
+          <span class="tooltip">Close all windows</span>
+          <!-- Tooltip text -->
         </button>
 
         <!-- Time and Date -->
@@ -78,9 +77,15 @@
 
     <!-- About Icon -->
     <div class="icon-container">
-      <img src="/images/about.png" alt="Info Icon" id="info-icon" class="icon" />
+      <img
+        src="/images/about.png"
+        alt="Info Icon"
+        id="info-icon"
+        class="icon"
+      />
       <span class="icon-text">About</span>
-      <span class="tooltip">Learn more about me</span> <!-- Tooltip text -->
+      <span class="tooltip">Learn more about me</span>
+      <!-- Tooltip text -->
     </div>
 
     <!-- Hardware Icon -->
@@ -92,90 +97,76 @@
         class="icon"
       />
       <span class="icon-text">Hardware</span>
-      <span class="tooltip">See my Hardware projects</span> <!-- Tooltip text -->
+      <span class="tooltip">See my Hardware projects</span>
+      <!-- Tooltip text -->
     </div>
 
     <!-- Web Dev Icon -->
     <div class="icon-container">
-      <img src="/images/webDev.png" alt="Webdev Icon" id="info-iconWebDev" class="icon" />
+      <img
+        src="/images/webDev.png"
+        alt="Webdev Icon"
+        id="info-iconWebDev"
+        class="icon"
+      />
       <span class="icon-text">Web Dev</span>
-      <span class="tooltip">See my Web Dev projects</span> <!-- Tooltip text -->
+      <span class="tooltip">See my Web Dev projects</span>
+      <!-- Tooltip text -->
     </div>
 
     <!-- VR Icon -->
     <div class="icon-container">
-      <img src="/images/vrIcon.png" alt="VR Icon" id="info-iconVR" class="icon" />
+      <img
+        src="/images/vrIcon.png"
+        alt="VR Icon"
+        id="info-iconVR"
+        class="icon"
+      />
       <span class="icon-text">VR Stuff</span>
-      <span class="tooltip">See my VR work</span> <!-- Tooltip text -->
+      <span class="tooltip">See my VR work</span>
+      <!-- Tooltip text -->
     </div>
 
     <br /><br />
 
     <!-- Blog Shortcut -->
     <div class="icon-container">
-      <img src="/images/blogIcon.png" alt="Blog Icon" id="info-iconBlog" class="icon" />
+      <img
+        src="/images/blogIcon.png"
+        alt="Blog Icon"
+        id="info-iconBlog"
+        class="icon"
+      />
       <span class="icon-text">Blog-Shortcut</span>
-      <span class="tooltip">Opens Blog in a new page</span> <!-- Tooltip text -->
+      <span class="tooltip">Opens Blog in a new page</span>
+      <!-- Tooltip text -->
     </div>
 
     <!-- Github Shortcut -->
     <div class="icon-container">
-      <img src="/images/gitIcon.png" alt="Git Icon" id="info-iconGit" class="icon" />
+      <img
+        src="/images/gitIcon.png"
+        alt="Git Icon"
+        id="info-iconGit"
+        class="icon"
+      />
       <span class="icon-text">Github-Shortcut</span>
-      <span class="tooltip">Opens Github in a new page</span> <!-- Tooltip text -->
+      <span class="tooltip">Opens Github in a new page</span>
+      <!-- Tooltip text -->
     </div>
 
     <!-- LinkedIn Shortcut -->
     <div class="icon-container">
-      <img src="/images/linkedInIcon.png" alt="LinkedIn Icon" id="info-iconLinkIn" class="icon" />
+      <img
+        src="/images/linkedInIcon.png"
+        alt="LinkedIn Icon"
+        id="info-iconLinkIn"
+        class="icon"
+      />
       <span class="icon-text">LinkedIn-Shortcut</span>
-      <span class="tooltip">Opens LinkedIn in a new page</span> <!-- Tooltip text -->
+      <span class="tooltip">Opens LinkedIn in a new page</span>
+      <!-- Tooltip text -->
     </div>
-
-    <!-- Resume Shortcut -->
-    <!-- <div class="icon-container">
-      <img src="/images/resumeIcon.png" alt="Resume Icon" id="info-iconResume" class="icon" />
-      <span class="icon-text">Resume</span>
-      <span class="tooltip">Opens Resume Page</span>
-    </div> -->
-
-    <!-- Certificates Shortcut -->
-    <!-- <div class="icon-container">
-      <img src="/images/certsIcon.png" alt="Certificates Icon" id="info-iconCerts" class="icon" />
-      <span class="icon-text">Certificates</span>
-      <span class="tooltip">Opens Certificates Page</span>
-    </div> -->
-
-    <!-- Software Shortcut -->
-    <!-- <div class="icon-container">
-      <img src="/images/softIcon.png" alt="Software Icon" id="info-iconSoft" class="icon" />
-      <span class="icon-text">Software</span>
-      <span class="tooltip">Opens Software Page</span>
-    </div> -->
-
-    <!-- Education Shortcut -->
-    <!-- <div class="icon-container">
-      <img src="/images/eduIcon.png" alt="Education Icon" id="info-iconEdu" class="icon" />
-      <span class="icon-text">Education</span>
-      <span class="tooltip">Opens Education Page</span>
-    </div> -->
-
-    <!-- Contact Shortcut -->
-    <!-- <div class="icon-container">
-      <img src="/images/contactIcon.png" alt="Contact Icon" id="info-iconContact" class="icon" />
-      <span class="icon-text">Contact</span>
-      <span class="tooltip">Opens Contact Page</span>
-    </div> -->
-
-    <!-- About Me Shortcut -->
-    <!-- <div class="icon-container">
-      <img src="/images/aboutMe.png" alt="Learn more about me..." id="info-iconAboutMe" class="icon" />
-      <span class="icon-text">About Me</span>
-      <span class="tooltip">Opens the about me Page</span>
-    </div> -->
-
-
-
 
     <!-- Draggable Windows -->
 
@@ -184,50 +175,71 @@
       <div class="window-header" id="info-header">Information</div>
       <span class="close-btn" id="info-close-btn">&times;</span>
       <div class="window-body">
-
         <!-- About Me Shortcut -->
         <div class="icon-container">
-          <img src="/images/aboutMe.png" alt="Learn more about me..." id="info-iconAboutMe" class="icon" />
+          <img
+            src="/images/aboutMe.png"
+            alt="Learn more about me..."
+            id="info-iconAboutMe"
+            class="icon"
+          />
           <span class="icon-text">About Me</span>
           <span class="tooltip">Opens the about me Page</span>
         </div>
 
         <!-- Resume Shortcut -->
         <div class="icon-container">
-          <img src="/images/resumeIcon.png" alt="Resume Icon" id="info-iconResume" class="icon" />
+          <img
+            src="/images/resumeIcon.png"
+            alt="Resume Icon"
+            id="info-iconResume"
+            class="icon"
+          />
           <span class="icon-text">Resume</span>
-          <span class="tooltip">Opens Resume Page</span> <!-- Tooltip text -->
-        </div>
-
-        <!-- Certificates Shortcut -->
-        <div class="icon-container">
-          <img src="/images/certsIcon.png" alt="Certificates Icon" id="info-iconCerts" class="icon" />
-          <span class="icon-text">Certificates</span>
-          <span class="tooltip">Opens Certificates Page</span> <!-- Tooltip text -->
-        </div>
-        <br><br>
-        <!-- Education Shortcut -->
-        <div class="icon-container">
-          <img src="/images/eduIcon.png" alt="Education Icon" id="info-iconEdu" class="icon" />
-          <span class="icon-text">Education</span>
-          <span class="tooltip">Opens Education Page</span> <!-- Tooltip text -->
-        </div>
-        <!-- Software Shortcut -->
-        <div class="icon-container">
-          <img src="/images/softIcon.png" alt="Software Icon" id="info-iconSoft" class="icon" />
-          <span class="icon-text">Software</span>
-          <span class="tooltip">Opens Software Page</span> <!-- Tooltip text -->
+          <span class="tooltip">Opens Resume Page</span>
         </div>
 
         <!-- Contact ME Shortcut -->
         <div class="icon-container">
-          <img src="/images/contactIcon.png" alt="Contact Icon" id="info-iconContact" class="icon" />
+          <img
+            src="/images/contactIcon.png"
+            alt="Contact Icon"
+            id="info-iconContact"
+            class="icon"
+          />
           <span class="icon-text">Contact</span>
           <span class="tooltip">Opens Contact Page</span>
         </div>
+
+        <!-- Contact ME Script -->
+        <!-- <script> 
+          // Add event listener to the Contact icon
+          document.getElementById('info-iconContact').addEventListener('dblclick', function () {
+            window.location.href = 'mailto:gary@example.com?subject=Hello!&body=I wanted to reach out.';
+          });
+        </script> -->
+
+        <!-- Certificates Shortcut -->
+        <!-- <div class="icon-container">
+          <img src="/images/certsIcon.png" alt="Certificates Icon" id="info-iconCerts" class="icon" />
+          <span class="icon-text">Certificates</span>
+          <span class="tooltip">Opens Certificates Page</span>
+        </div>
+        <br><br> -->
+        <!-- Education Shortcut -->
+        <!-- <div class="icon-container">
+          <img src="/images/eduIcon.png" alt="Education Icon" id="info-iconEdu" class="icon" />
+          <span class="icon-text">Education</span>
+          <span class="tooltip">Opens Education Page</span>
+        </div> -->
+        <!-- Software Shortcut -->
+        <!-- <div class="icon-container">
+          <img src="/images/softIcon.png" alt="Software Icon" id="info-iconSoft" class="icon" />
+          <span class="icon-text">Software</span>
+          <span class="tooltip">Opens Software Page</span>
+        </div> -->
       </div>
     </div>
-
 
     <!-- Hardware window contents -->
     <div id="info-window-hardware" class="info-window">
@@ -380,9 +392,8 @@
       <div class="window-body">
         <p>VR INFO</p>
         <p>
-          VR VR VRcVR VRVR VRVRVRRVRV VR VR VRcVR VRVR VRVRVRRVRVVR VR VRcVR VRVR
-           VRVRVRRVRVVR VR VRcVR VRVR VRVRVRRVRVVR VR VRcVR VRVR VRVRVRRVRV
-          
+          VR VR VRcVR VRVR VRVRVRRVRV VR VR VRcVR VRVR VRVRVRRVRVVR VR VRcVR
+          VRVR VRVRVRRVRVVR VR VRcVR VRVR VRVRVRRVRVVR VR VRcVR VRVR VRVRVRRVRV
         </p>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -403,64 +414,43 @@
       <div class="window-body">
         <p>About Me!</p>
         <p>
-          About Me! About Me! About Me! About Me! About Me! About Me! About Me! 
-          About Me!About Me! About Me! About Me! About Me! About Me! About Me! 
-          About Me!About Me!About Me!About Me! About Me! About Me! About Me!About Me!
+          About Me! About Me! About Me! About Me! About Me! About Me! About Me!
+          About Me!About Me! About Me! About Me! About Me! About Me! About Me!
+          About Me!About Me!About Me!About Me! About Me! About Me! About
+          Me!About Me!
         </p>
       </div>
     </div>
 
-    <!-- BLANK window contents -->
-    <div id="info-window6" class="info-window">
-      <div class="window-header" id="header6">BLANK</div>
+    <!-- Resume window contents -->
+    <div id="info-window-resume" class="info-window">
+      <div class="window-header" id="resume-header">Resume</div>
       <span class="close-btn">&times;</span>
       <div class="window-body">
-        <p>BLANK</p>
+        <p>Resume</p>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore
+          Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
+          Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
+          Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
+          Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
+          Resume Resume Resume Resume Resume Resume Resume Resume Resume Resume
         </p>
       </div>
+    </div>
 
-      <!-- BLANK window contents -->
-      <div id="info-window7" class="info-window">
-        <div class="window-header" id="header7">BLANK</div>
-        <span class="close-btn">&times;</span>
-        <div class="window-body">
-          <p>BLANK</p>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore
-          </p>
-        </div>
+    <!-- Contact window contents -->
+    <div id="info-window-contact" class="info-window">
+      <div class="window-header" id="contact-header">Contact Me</div>
+      <span class="close-btn">&times;</span>
+      <div class="window-body">
+        <p>Contact Me</p>
+        <p>
+          Contact Me - Contact Me - Contact Me - Contact Me - Contact Me -
+          Contact Me - Contact Me - Contact Me - Contact Me - Contact Me -
+          Contact Me - Contact Me - Contact Me - Contact Me - Contact Me -
+          Contact Me - Contact Me - Contact Me -
+        </p>
+      </div>
     </div>
 
     <script src="script.js"></script>

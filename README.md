@@ -1,5 +1,9 @@
 "# click-icon"
 
+Added windows within windows
+
+![aboutWin](https://github.com/user-attachments/assets/2b1915e3-6a27-4286-8f3b-e44bceffe647)
+
 Navbar closes upon click
 
 ![dropDown](https://github.com/user-attachments/assets/269ade67-18ac-48ab-9a51-ffc4fcefd112)

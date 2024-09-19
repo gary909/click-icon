@@ -1,5 +1,9 @@
 "# click-icon"
 
+Completed Contact Me page:
+
+![contactPage](https://github.com/user-attachments/assets/7574984c-3382-4959-a165-e9c352e29d2b) 
+
 Added 'image loading' effect for bio picture:
 
 ![imageLoad](https://github.com/user-attachments/assets/2d475ed3-30a4-4c94-bfe0-6f2c7944f093)

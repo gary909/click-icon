@@ -426,4 +426,93 @@ projectsLink.addEventListener("click", function (event) {
   closeAllDropdowns();
 });
 
+//**************************Pixelated Image Code************************************ */
+
+// const image = document.getElementById("image");
+// const images = ["images/Ghck4.jpg", "images/Ghck3.jpg", "images/Ghck2.jpg"];
+
+// let index = 0;
+// const delay = 500; // Adjust the delay in milliseconds as needed
+
+// function transitionImage() {
+//   if (index < images.length) {
+//     image.src = images[index];
+//     index++;
+//     setTimeout(transitionImage, delay);
+//   }
+// }
+
+// // Start the transition on page load
+// setTimeout(transitionImage, delay);
+
 //********************************************************************************* */
+
+// const infoWindow = document.getElementById("info-window-aboutMe");
+// const image = document.getElementById("image");
+// const images = ["images/GHck4.jpg", "images/GHck3.jpg", "images/GHck2.jpg"];
+
+// let index = 0;
+// const delay = 500; // Adjust the delay in milliseconds as needed
+
+// function transitionImage() {
+//   if (index < images.length) {
+//     image.src = images[index];
+//     index++;
+//     setTimeout(transitionImage, delay);
+//   }
+// }
+
+// // Add an event listener to the window to check if it's visible
+// infoWindow.addEventListener("click", () => {
+//   if (infoWindow.style.display !== "none") {
+//     // Start the transition when the window is visible
+//     setTimeout(transitionImage, delay);
+//   }
+// });
+
+// // Initially hide the window
+// infoWindow.style.display = "none";
+
+//********************************************************************************* */
+
+const infoWindow = document.getElementById("info-window-aboutMe");
+const image = document.getElementById("image");
+const images = ["images/GHck4.jpg", "images/GHck3.jpg", "images/GHck2.jpg"];
+
+let index = 0;
+const delay = 500; // Adjust the delay in milliseconds as needed
+
+function transitionImage() {
+  if (index < images.length) {
+    image.src = images[index];
+    index++;
+    setTimeout(transitionImage, delay);
+  }
+}
+
+// Function to trigger when the window is opened
+function handleWindowOpen() {
+  if (infoWindow.style.display !== "none") {
+    // Reset index and start image transition
+    index = 0;
+    setTimeout(transitionImage, delay);
+  }
+}
+
+// Observe changes in the display style of the window
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (
+      mutation.attributeName === "style" &&
+      infoWindow.style.display === "block"
+    ) {
+      handleWindowOpen();
+    }
+  });
+});
+
+// Start observing the info window for style changes
+observer.observe(infoWindow, { attributes: true });
+
+// Initially hide the window
+infoWindow.style.display = "none";

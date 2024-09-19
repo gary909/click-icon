@@ -380,3 +380,8 @@ body {
   opacity: 1;
   transition-delay: 0.5s; /* Delay the fade-in by 0.5s */
 }
+
+/********************Pixelated Image***************************/
+.image {
+  width: 30%;
+}

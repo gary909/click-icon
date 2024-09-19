@@ -385,3 +385,10 @@ body {
 .image {
   width: 30%;
 }
+
+/********************SMall Window***************************/
+
+.smallWindow {
+  width: 225px;
+  height: 320px;
+}

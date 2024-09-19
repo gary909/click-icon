@@ -473,7 +473,7 @@ projectsLink.addEventListener("click", function (event) {
 // // Initially hide the window
 // infoWindow.style.display = "none";
 
-//********************************************************************************* */
+//*************************Pixelated Bio Image reveal****************************** */
 
 const infoWindow = document.getElementById("info-window-aboutMe");
 const image = document.getElementById("image");
@@ -516,3 +516,59 @@ observer.observe(infoWindow, { attributes: true });
 
 // Initially hide the window
 infoWindow.style.display = "none";
+
+//********************Blog Text Carousel***************************/
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sentences = [
+    '"I found your Blog Hoskins site, and well.. what a wonderful thing youve done"',
+    '"Your explanations were so useful and Ive certainly learnt a lot more than I knew before I found your site!"',
+    '"OH MAN I JUST GOT IT WORKING! THE SHEER JOY! Thanks for your work!"',
+    '"Just a quick note to say thanks for the Helios project article. It started me off down a fantastic rabbit hole.."',
+  ];
+  let currentIndex = 0;
+
+  const sentenceElement = document.getElementById("sentence");
+
+  function showNextSentence() {
+    // Fade out first
+    sentenceElement.classList.remove("fade-in");
+
+    // Wait for the fade-out to complete before changing the text
+    setTimeout(() => {
+      // Update the text content
+      currentIndex = (currentIndex + 1) % sentences.length;
+      sentenceElement.textContent = sentences[currentIndex];
+
+      // Force reflow: this ensures the class change is registered properly
+      void sentenceElement.offsetWidth; // Forces the browser to reflow, so it registers the class re-adding
+
+      // Fade the new sentence in
+      sentenceElement.classList.add("fade-in");
+    }, 1000); // Match the fade-out duration (1s)
+  }
+
+  // Initial fade-in for the first sentence
+  sentenceElement.classList.add("fade-in");
+
+  // Cycle through sentences every 3 seconds
+  setInterval(showNextSentence, 3000);
+});
+
+//********************Collapsible Certs***************************/
+document.addEventListener("DOMContentLoaded", function () {
+  const collapsibles = document.querySelectorAll(".collapsible");
+
+  collapsibles.forEach((button) => {
+    button.addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      const content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  });
+});

@@ -2,7 +2,7 @@
 
 Completed Contact Me page:
 
-https://github.com/user-attachments/assets/73dc5a1b-4ef0-4fad-958e-28e047eaeb12
+![contactPage](https://github.com/user-attachments/assets/7574984c-3382-4959-a165-e9c352e29d2b) 
 
 Added 'image loading' effect for bio picture:
 

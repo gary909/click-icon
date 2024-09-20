@@ -488,3 +488,56 @@ body {
 .content.show {
   display: block;
 }
+
+/********************Edu Table***************************/
+
+/* Add borders to the table and its cells */
+table.centerEdu {
+  border-collapse: collapse; /* Ensures borders are merged between cells */
+  width: 100%;
+  margin: auto;
+  text-align: left;
+}
+
+table.centerEdu th,
+table.centerEdu td {
+  border: 1px solid #0277bd; /* Color of the border lines */
+  padding: 8px; /* Space inside cells */
+}
+
+th.paddingEdu {
+  background-color: #01579b; /* Add background color to header */
+  color: white; /* Header text color */
+}
+
+td.paddingEdu {
+  background-color: #e3f2fd; /* Add a light background color to cells */
+}
+
+td.leftEdu {
+  text-align: left; /* Ensure text is aligned left */
+}
+
+/********************Certs Table***************************/
+
+table.centerCourses {
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+}
+
+table.centerCourses th,
+table.centerCourses td {
+  border: 1px solid #0101ca;
+  padding: 8px;
+}
+
+th {
+  background-color: #004f9f;
+  color: white;
+}
+
+td {
+  background-color: #e3f2fd;
+}
